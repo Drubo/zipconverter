@@ -1,0 +1,17 @@
+<?php 
+require 'zipconverter.php';
+
+$zip = new zipConverter();
+$zip->setRecursiveness(true); //default is false
+$zip->addFolder(
+    array(
+        './', //path of the current file
+        'F:\wamp2\www\yml', //Windows Path
+        '/var/www/html'  //linux path
+    )
+);
+$zip->setZipPath('./files.zip'); //Set your Zip Path with your Zip File's Name
+$result = $zip->convert();
+
+echo "<pre>";var_dump($result);echo "</pre>";
+?>
