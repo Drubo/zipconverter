@@ -64,11 +64,11 @@ class zipConverter
     }
 
     /**
-     * Converts your Provided Folders into Zip Archive
+     * Creates Zip Archive from your Provided Folders
      * 
      * @return array
      */
-    function convert()
+    function createArchive()
     {
         if (count($this->_folderList) == 0) {
             return array("error"=>true, "msg"=>"You did not set Folder(s) which needs to be added into Zip Archive");

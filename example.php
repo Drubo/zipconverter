@@ -11,7 +11,7 @@ $zip->addFolder(
     )
 );
 $zip->setZipPath('./files.zip'); //Set your Zip Path with your Zip File's Name
-$result = $zip->convert();
+$result = $zip->createArchive();
 
 echo "<pre>";var_dump($result);echo "</pre>";
 ?>
